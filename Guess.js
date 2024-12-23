@@ -12,5 +12,6 @@ submitGuess.addEventListener("click", ()=>{
             outputDiv.innerHTML= "You are close try again";
             
         }
-}
+        outputDiv.value= "";
+    }
 )

@@ -1,0 +1,150 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: #eef2f7; /* Soft light background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Main Game Container */
+.game-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.game-container:hover {
+    transform: scale(1.05); /* Subtle zoom on hover */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Styling */
+h1 {
+    font-size: 2rem;
+    color: #4a90e2; /* Modern blue */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Input Section */
+.input-container {
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
+    padding: 15px;
+    width: 80%;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    background-color: #f0f4f8;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="number"]:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(72, 128, 243, 0.2); /* Soft glow */
+}
+
+input[type="number"]:hover {
+    background-color: #f8fafc;
+}
+
+/* Button Styling */
+button {
+    background-color: #4a90e2;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #357ab7;
+    transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+button:active {
+    transform: translateY(1px); /* Subtle press effect */
+}
+
+/* Output Section */
+#output {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    font-weight: 500;
+    color: #000000;
+    /* display: none; */
+}
+
+/* Correct Guess Styling */
+.correct {
+    background-color: #66bb6a; /* Fresh green */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.correct.fadeIn {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Incorrect Guess Styling */
+.wrong {
+    background-color: #ff7043; /* Vibrant orange */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.wrong.fadeIn {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 480px) {
+    .game-container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input[type="number"], button {
+        width: 100%;
+    }
+}
