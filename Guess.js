@@ -1,7 +1,6 @@
 let findNo= 5;
 let outputDiv= document.getElementById("output");
 let inputField = document.getElementById("inputGuess");
-console.log(" Start the game !!");
 
 function handleGuess(){
     let inputNum= parseInt(document.getElementById("inputGuess").value);
@@ -33,9 +32,14 @@ inputGuess.addEventListener("keydown", (event)=>{
         handleGuess();
     }
 });
-
-let themeChange= document.getElementById("themeToggle");
+const body = document.body;
+const themeChange= document.getElementById("themeToggle");
 themeChange.addEventListener("click", ()=>{
-    
+    body.classList.toggle("dark-theme");
+    if(body.classList.contains("dark-theme")){
+        themeToggle.innerHTML="☀️";
+    }else{
+        themeToggle.innerHTML="🌙";
+    }
 })
 
